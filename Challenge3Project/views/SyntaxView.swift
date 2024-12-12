@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SyntaxView: View {
     let language: ProgrammingLanguage
+    
 
     var body: some View {
         Text("Syntax content for \(language.name)")

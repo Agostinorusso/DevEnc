@@ -10,6 +10,8 @@ import SwiftUI
 struct ProgrammingLanguageDetailView: View {
     let language: ProgrammingLanguage
     @ObservedObject var viewModel: ProgrammingLanguagesViewModel
+    
+    
 
     var body: some View {
         VStack {
