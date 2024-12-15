@@ -15,7 +15,7 @@ struct ContentView: View {
         NavigationView {
             VStack {
                 // Title
-                Text("DevDictionary")
+                Text("DevEnc")
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top, 20)
