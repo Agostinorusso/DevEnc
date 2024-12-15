@@ -5,6 +5,7 @@
 //  Created by Agostino Russo  on 10/12/24.
 //
 
+import SwiftUICore
 import SwiftUI
 
 struct ContentView: View {
@@ -18,12 +19,14 @@ struct ContentView: View {
                     .font(.largeTitle)
                     .fontWeight(.bold)
                     .padding(.top, 20)
+                    .accessibilityLabel("Dev Dictionary")
+                    .accessibilityHint("A list of programming languages with descriptions and syntax")
 
                 // List of Programming Languages
                 List(viewModel.programmingLanguages) { language in
                     NavigationLink(
                         destination: ProgrammingLanguageDetailView(language: language, viewModel: viewModel)
-                    ) {
+                            .accessibilityLabel("Go to details for \(language.name)")) {
                         HStack {
                             // Icon on the left
                             Image(language.icon)
@@ -31,10 +34,12 @@ struct ContentView: View {
                                 .scaledToFit()
                                 .frame(width: 70, height: 80) // Adjust size as needed
                                 .padding(.trailing, 10)
+                                .accessibilityLabel("\(language.name) icon")
                             
                             // Language Name
                             Text(language.name)
                                 .font(.headline)
+                                .accessibilityLabel(language.name)
                         }
                     }
                 }
@@ -44,11 +49,4 @@ struct ContentView: View {
             .navigationBarHidden(true)
         }
     }
-}
-
-
-
-
-#Preview {
-    ContentView()
 }
