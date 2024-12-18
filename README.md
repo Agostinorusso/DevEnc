@@ -1,5 +1,7 @@
 # DevEnc
 
+![App Screenshot](AppIcon.PNG)
+
 
 DevEnc is a Swift-based iOS designed to store and organize descriptions, syntaxes and example of programming languages. It serves as a quick-access reference tool for developers, making it easier to learn and remember the fundamentals of other programming languages.
 
@@ -51,3 +53,11 @@ Email: agostino.russo04@gmail.com
 Linkedin: Agostino Russo
 
 GitHub: Agostinorusso 
+
+
+These are some screenshots of the application
+
+![App Screenshot](https://github.com/Agostinorusso/DevEnc/blob/main/Screenshot%202024-12-17%20at%2014.51.51.jpeg)
+
+
+![App Screenshot](https://github.com/Agostinorusso/DevEnc/blob/main/Screenshot%202024-12-17%20at%2014.56.23.jpeg)
