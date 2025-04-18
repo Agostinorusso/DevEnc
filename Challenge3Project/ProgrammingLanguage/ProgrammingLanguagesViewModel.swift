@@ -5,27 +5,24 @@
 //  Created by Agostino Russo  on 10/12/24.
 //
 
-import SwiftUI
+import Foundation
 
-// Enum for toolbar options
-enum ToolbarOption {
-    case dictionary
-    case syntax
+final class ProgrammingLanguageViewModel: ObservableObject {
+    @Published var languages: [ProgrammingLanguage] = []
+    
+    init() {
+        loadLanguages()
+    }
+    
+    private func loadLanguages() {
+        languages = [
+            ProgrammingLanguage(name: "Swift", iconName: "swift_icon"),
+            ProgrammingLanguage(name: "Python", iconName: "python_icon"),
+            ProgrammingLanguage(name: "Java", iconName: "java_icon"),
+            ProgrammingLanguage(name: "C", iconName: "c_icon"),
+            ProgrammingLanguage(name: "C++", iconName: "cpp_icon"),
+            ProgrammingLanguage(name: "Ruby", iconName: "ruby_icon"),
+            ProgrammingLanguage(name: "JavaScript", iconName: "javascript_icon")
+        ]
+    }
 }
-
-// ViewModel to manage the programming languages and toolbar state
-class ProgrammingLanguagesViewModel: ObservableObject {
-    @Published var programmingLanguages: [ProgrammingLanguage] = [
-        ProgrammingLanguage(name: "Swift", icon: "swiftCustomIcon"), // Replace with actual image names
-        ProgrammingLanguage(name: "Python", icon: "pythonCustomIcon"),
-        ProgrammingLanguage(name: "JavaScript", icon: "javascriptCustomIcon"),
-        ProgrammingLanguage(name: "Java", icon: "javaCustomIcon"),
-        ProgrammingLanguage(name: "C", icon: "cCustomIcon"),
-        ProgrammingLanguage(name: "C++", icon: "c++CustomIcon"),
-        ProgrammingLanguage(name: "Ruby", icon: "rubyCustomIcon")
-    ]
-
-    @Published var toolbarSelection: ToolbarOption = .dictionary // Default toolbar option
-}
-
-

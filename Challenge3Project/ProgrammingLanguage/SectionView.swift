@@ -7,15 +7,21 @@
 
 import SwiftUI
 
-struct AccessibilitySection: View {
-    var body: some View {
-        // Content of Accessibility Section
-        Text("This is the Accessibility Section.")
-    }
-}
+struct SectionView: View {
+    let title: String
+    let content: String
 
-struct AccessibilitySection_Previews: PreviewProvider {
-    static var previews: some View {
-        AccessibilitySection()
+    var body: some View {
+        VStack(alignment: .leading, spacing: 8) {
+            Text(title)
+                .font(.headline)
+                .foregroundColor(.blue)
+                .accessibilityAddTraits(.isHeader)
+
+            Text(content)
+                .font(.body)
+                .multilineTextAlignment(.leading)
+                .accessibilityLabel(content)
+        }
     }
 }
